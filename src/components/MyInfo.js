@@ -1,6 +1,7 @@
 import "./MyInfo.css"
 
-function MyInfo({ propertyReceivingData }  ) {
+//function MyInfo({ propertyReceivingData }  ) {
+function MyInfo(props) {
 
     const isEmpty = false;
 
@@ -38,7 +39,8 @@ function MyInfo({ propertyReceivingData }  ) {
 
                 {secondList && <ul>
                     <li>Chypre</li>
-                    <li> { propertyReceivingData } </li>
+                    {/* <li> { propertyReceivingData } </li> */}
+                    <li> { props.propertyReceivingData } </li>
                     <li> { `J'aimerai aussi aller en ${countryName}` } </li>
                     { liElement /* ligne JS (entre accolades)*/}           
                 </ul>
