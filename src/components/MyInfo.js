@@ -1,7 +1,7 @@
 import "./MyInfo.css"
 
 //function MyInfo({ propertyReceivingData }  ) {
-function MyInfo(props) {
+function MyInfo( props ) {
 
     const isEmpty = false;
 
@@ -48,6 +48,11 @@ function MyInfo(props) {
                 <p>nombre de destinations: {counter + 1}</p>
 
                 { elementsMap }
+
+                { props.state }
+
+                <button onClick={props.increase} > + </button>
+                <button onClick={props.decrease} > - </button>
             
         
         </div>
