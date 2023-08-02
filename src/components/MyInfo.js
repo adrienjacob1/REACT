@@ -3,6 +3,14 @@ import "./MyInfo.css"
 //function MyInfo({ propertyReceivingData }  ) {
 function MyInfo( props ) {
 
+    const [inputUserName, setInputUserName] = useState( {
+        username: ""
+    } );
+
+    function somHandlerFunction() {
+        // Do something with setInputUserName
+    }
+
     const isEmpty = false;
 
     const secondList = true;
@@ -16,10 +24,18 @@ function MyInfo( props ) {
 
     const counter = 3;
 
+   
+
     const styles = {
         color: "#F00",
         backgroundColor: "#0F0",
         fontSize: "1.2rem"   // si je veux des pixels en unité, je peux simplement écrire le nombre de pixel en type nombre
+    }
+
+    const a = "Helow world";
+
+    function handleClick(string) {
+        console.log(string);
     }
 
     if (isEmpty) {
@@ -27,7 +43,7 @@ function MyInfo( props ) {
     }
 
     return (
-        <div className="someClass">
+        <div className={isEmpty ? "someClass" : "someOtherClass"}>
                 <h2>Adrien</h2>
                 <p style={styles}>Ma liste de destination de voyage :</p>
                 { !secondList && <ul>
@@ -53,6 +69,10 @@ function MyInfo( props ) {
 
                 <button onClick={props.increase} > + </button>
                 <button onClick={props.decrease} > - </button>
+
+                <button onClick={() => handleClick(a) } > Déclencher console log </button>
+
+                <input type="text" placeholder="Mon nom est..." name="username" value={inputUserName.username} onChange={somHandlerFunction} />
             
         
         </div>
