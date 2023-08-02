@@ -1,9 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+// class App() {}
+
+
+/* Quand le composant est rendu par une fonction on l'appelle Composant Fonctionnel*/
 function App() {
   return (
-    <div className="App">
+    <div className="App"> { /* JS dans la paire d'accolades et JSx a l'extérieur des accolades*/ }
+    {/* pour écrire un commentaire dans la partie JSX du fichier, il faut l'enturer d'accolades */}
+    
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,7 +24,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <section></section>
+      <h2>Exemple</h2>
+      <p></p>
     </div>
+    //<div></div>
   );
 }
 
