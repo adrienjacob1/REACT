@@ -12,6 +12,8 @@ function App() {
 
   const [state, setState] = useState(0);
 
+  const dataToPass = "Irlande";
+
   function increase() {
     //setState(1);
     setState(prevState => prevState + 1);
@@ -20,11 +22,19 @@ function App() {
   function decrease() {
     setState(prevState => prevState - 1)
   }
+
+  useEffect(() => {
+    //localStorage.setItem("state", state);
+    increase();
+    console.log("infinite loop!")
+  }, []);  /* Il ne faut pas oublier soit [], soit [state] pour éviter une boucle infinie car sinon useEffect change le rendu, react s'en apercoit, recharge, on revient sur 
+  useEffect qui modifie le rendu et ainsi de suite. La, useEffect ne va s'activer que si state change. On appelle ca un tableau de dépendance*/
  
 
 
 
-  const dataToPass = "Irlande";
+
+  
 
   return (
     <div className="App"> { /* JS dans la paire d'accolades et JSx a l'extérieur des accolades*/ }
