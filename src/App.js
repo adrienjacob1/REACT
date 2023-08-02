@@ -33,7 +33,7 @@ function App() {
     {/* <button onClick={increase} > + </button>
     <button onClick={decrease} > - </button> */}
       { state }
-      <MyInfo propertyReceivingData={dataToPass} state={state} setState={setState} increase={increase} decrease= {decrease} />
+      <MyInfo propertyReceivingData={dataToPass} state={state} increase={increase} decrease= {decrease} />
     </div>
     //<div></div>
   );
